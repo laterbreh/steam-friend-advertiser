@@ -7,10 +7,14 @@
     "test": "node bot.js"
   },
   "keywords": [
-    "steam",
-    "friend",
-    "message"
+    "steam friend message",
+    "steam friend",
+    "steam message"
   ],
   "author": "Laterbreh",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sleep": "^3.0.1",
+    "steam-user": "^3.3.2"
+  }
 }
