@@ -1,0 +1,16 @@
+{
+  "name": "steam-friend-advertiser",
+  "version": "1.0.0",
+  "description": "This script was designed to easily send every user on your friends list a message. You DO NOT need to be logged out of the client.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "keywords": [
+    "steam",
+    "friend",
+    "message"
+  ],
+  "author": "Laterbreh",
+  "license": "ISC"
+}
