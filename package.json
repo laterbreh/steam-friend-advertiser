@@ -14,7 +14,6 @@
   "author": "Laterbreh",
   "license": "ISC",
   "dependencies": {
-    "sleep": "^3.0.1",
     "steam-user": "^3.3.2"
   }
 }
