@@ -6,12 +6,17 @@
  */
 var SteamUser = require('steam-user');
 var client = new SteamUser();
-var sleep = require('sleep');
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+function msleep(n) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n);
+}
+function sleep(n) {
+  msleep(n*1000);
+};
 rl.question('Username: ', function (accountname) {
     rl.question('Password: ', function (password) {
         rl.question('Message that you would like to send to your friends list: ', function (message) {
@@ -40,7 +45,7 @@ function doLogin(accountname, password, message) {
             if (client.myFriends.hasOwnProperty(key)) {
                 count++;
                 //Comment out line 43 if you want to risk it... Current delay is 2 seconds between each message.
-                sleep.sleep(2);
+                sleep(2);
                 console.log('Sending Message Number: ' + count);
                 client.chatMessage(key, message);
 
